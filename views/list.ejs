@@ -1,0 +1,27 @@
+<%- include("header") -%>
+
+
+  <div class="box" id="heading">
+    <h1 style="color:purple"><%=kindOfDay%></h1>
+  </div>
+
+  <div class="box">
+      <% for(i=0;i<tasks.length;i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p><%=tasks[i]%></p>
+      </div>
+      <%}%>
+
+      <form class="item" action="/" method="post">
+
+        <input type="text" name="taskName" class="taskName" placeholder="Task Name" required autofocus autocomplete="off">
+
+        <button class="button" type="submit">+</button>
+
+      </form>
+
+</div>
+
+
+<%- include("footer") -%>
